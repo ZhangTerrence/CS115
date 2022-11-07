@@ -1,0 +1,22 @@
+#########################################
+# Name: Terrence Zhang
+# Pledge: I pledge my honor that I have abided by the Stevens Honor System.
+# Homework 1
+#########################################
+from functools import reduce
+
+
+def multiply(x,y):
+    return x*y
+
+
+def factorial(n):
+    return reduce(multiply, range(1, n+1))
+
+
+def add(x,y):
+    return x+y
+
+
+def mean(L):
+    return reduce(add, L)/len(L)
