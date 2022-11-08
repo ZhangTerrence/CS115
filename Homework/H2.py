@@ -52,7 +52,7 @@ def scoreList(Rack):
 
 def bestWord(Rack):
     """Returns the word with the highest score and its score that can be made from letter Rack """
-    return list(reduce(lambda x, y: x if x > y else y, scoreList(Rack)))
+    return list(reduce(lambda x, y: x if x[-1] > y[-1] else y, scoreList(Rack) + [['', 0]]))
 
 
 
