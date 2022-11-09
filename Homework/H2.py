@@ -1,7 +1,7 @@
 #########################################
 # Name: Terrence Zhang
 # Pledge: I pledge my honor that I have abided by the Stevens Honor System.
-# Homework 1
+# Homework 2
 #########################################
 import sys
 
@@ -32,9 +32,7 @@ def letterScore(letter, score_list):
 
 def wordScore(S, score_list):
     """Returns scrabble score of a word."""
-    if S == '':
-        return 0
-    return letterScore(S[0], score_list) + wordScore(S[1:], score_list)
+    return reduce(lambda x, y: x + y, map(lambda x: letterScore(x, score_list), S))
 
 
 def scoreList(Rack):
