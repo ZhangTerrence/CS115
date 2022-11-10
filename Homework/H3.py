@@ -13,9 +13,8 @@
 # your code goes here
 
 def giveChange(amount, coins):
-    """Given a specific amount and list of possible coins, returns the
-    minimum amount of coins needed to make up that amount and also shows
-    the combination of coins needed for that amount"""
+    """Given a specific amount and list of possible coins, returns the minimum amount of coins needed to make up that
+    amount and also shows the combination of coins needed for that amount"""
     if amount == 0:
         return [0, []]
     elif coins == [] and amount > 0:
@@ -52,10 +51,9 @@ from functools import reduce
 def wordsWithScore(dct, scores):
     """List of words in dct, with their Scrabble score.
 
-    Assume dct is a list of words and scores is a list of [letter,number]
-    pairs. Return the dictionary annotated so each word is paired with its
-    value. For example, wordsWithScore(Dictionary, scrabbleScores) should
-    return [['a', 1], ['am', 4], ['at', 2] ...etc... ]
+    Assume dct is a list of words and scores is a list of [letter,number] pairs. Return the dictionary annotated so
+    each word is paired with its value. For example, wordsWithScore(Dictionary, scrabbleScores) should return
+    [['a', 1], ['am', 4], ['at', 2] ...etc... ]
     """
     def findScore(word, score_list):
         return reduce(lambda x, y: x + y, map(lambda letter: list(filter(lambda l: l[0] == letter, score_list))[0][1], word))
@@ -65,29 +63,23 @@ def wordsWithScore(dct, scores):
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 ' PROBLEM 2
-' For the sake of an exercise, we will implement a function
-' that does a kind of slice. You must use recursion for this
-' one. Your code is allowed to refer to list index L[0] and
-' also use slice notation L[1:] but no other slices.
+' For the sake of an exercise, we will implement a function that does a kind of slice. You must use recursion for this
+' one. Your code is allowed to refer to list index L[0] and also use slice notation L[1:] but no other slices.
 ' (Notice that you cannot assume anything about the length of the list.)
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 def take(n, L):
     """Returns the list L[0:n], assuming L is a list and n is at least 0."""
     if n == 0 or L == []:
         return []
-    else:
-        return [L[0]] + take(n - 1, L[1:])
+    return [L[0]] + take(n - 1, L[1:])
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 ' PROBLEM 3
-' Similar to problem 2, will implement another function
-' that does a kind of slice. You must use recursion for this
-' one. Your code is allowed to refer to list index L[0] and
-' also use slice notation L[1:] but no other slices.
+' Similar to problem 2, will implement another function that does a kind of slice. You must use recursion for this
+' one. Your code is allowed to refer to list index L[0] and also use slice notation L[1:] but no other slices.
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 def drop(n, L):
     """Returns the list L[n:], assuming L is a list and n is at least 0."""
     if n == 0:
         return L
-    else:
-        return drop(n - 1, L[1:])
+    return drop(n - 1, L[1:])

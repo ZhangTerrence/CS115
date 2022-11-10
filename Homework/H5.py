@@ -6,9 +6,8 @@
 
 memo_lucas = {}
 def fast_lucas(n):
-    """Returns the nth Lucas number using the memoization technique
-    shown in class and lab. The Lucas numbers are as follows:
-    [2, 1, 3, 4, 7, 11, ...]"""
+    """Returns the nth Lucas number using the memoization technique shown in class and lab. The Lucas numbers are as
+    follows: [2, 1, 3, 4, 7, 11, ...]"""
     if n in memo_lucas:
         return memo_lucas[n]
     elif n == 0:
@@ -21,9 +20,8 @@ def fast_lucas(n):
 
 memo_change = {}
 def fast_change(amount, coins):
-    """Takes an amount and a list of coin denominations as input.
-    Returns the number of coins required to total the given amount.
-    Uses memoization to improve performance."""
+    """Takes an amount and a list of coin denominations as input. Returns the number of coins required to total the
+    given amount. Uses memoization to improve performance."""
     if (amount, tuple(coins)) in memo_change:
         return memo_change[(amount, tuple(coins))]
     elif amount == 0:

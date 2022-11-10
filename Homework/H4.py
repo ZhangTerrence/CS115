@@ -12,8 +12,7 @@ def addingRow(L):
         return [L[0] + L[1]] + addingRow(L[1:])
 
 def pascal_row(n):
-    """Returns a list containing the integers found on the n-th row of
-    Pascal's Triangle"""
+    """Returns a list containing the integers found on the n-th row of Pascal's Triangle"""
     if n == 0:
         return [1]
     if n == 1:
@@ -22,8 +21,7 @@ def pascal_row(n):
         return [1] + addingRow(pascal_row(n-1)) + [1]
 
 def pascal_triangle(n):
-    """Returns a list of lists containing all the integers from the 0th row
-    to the n-th row of Pascal's Triangle"""
+    """Returns a list of lists containing all the integers from the 0th row to the n-th row of Pascal's Triangle"""
     if n < 0:
         return []
     else:
