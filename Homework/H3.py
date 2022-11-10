@@ -10,10 +10,7 @@
 ' Implement the function giveChange() here:
 ' See the PDF in Canvas for more details.
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-
 # your code goes here
-
 
 def giveChange(amount, coins):
     """Given a specific amount and list of possible coins, returns the
@@ -52,7 +49,6 @@ Dictionary = ['a', 'am', 'at', 'apple', 'bat', 'bar', 'babble', 'can', 'foo',
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 from functools import reduce
 
-
 def wordsWithScore(dct, scores):
     """List of words in dct, with their Scrabble score.
 
@@ -67,7 +63,6 @@ def wordsWithScore(dct, scores):
     # One line
     # return reduce(lambda z, y: z+y, map(lambda x: [[x, reduce(lambda v, w: v+w, map(lambda u: list(filter(lambda l: l[0] == u, scores))[0][1], x))]], dct))
 
-
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 ' PROBLEM 2
 ' For the sake of an exercise, we will implement a function
@@ -76,15 +71,12 @@ def wordsWithScore(dct, scores):
 ' also use slice notation L[1:] but no other slices.
 ' (Notice that you cannot assume anything about the length of the list.)
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-
 def take(n, L):
     """Returns the list L[0:n], assuming L is a list and n is at least 0."""
     if n == 0 or L == []:
         return []
     else:
         return [L[0]] + take(n - 1, L[1:])
-
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 ' PROBLEM 3
@@ -93,8 +85,6 @@ def take(n, L):
 ' one. Your code is allowed to refer to list index L[0] and
 ' also use slice notation L[1:] but no other slices.
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-
 def drop(n, L):
     """Returns the list L[n:], assuming L is a list and n is at least 0."""
     if n == 0:

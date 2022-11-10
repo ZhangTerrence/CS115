@@ -24,16 +24,13 @@ Dictionary = ['a', 'am', 'at', 'apple', 'bat', 'bar', 'babble', 'can', 'foo',
 # Implement your functions here.
 from functools import reduce
 
-
 def letterScore(letter, score_list):
-    """Returns scrabble score of a letter."""
+    """Returns scrabble score of a letter"""
     return list(filter(lambda l: l[0] == letter, score_list))[0][1]
 
-
 def wordScore(S, score_list):
-    """Returns scrabble score of a word."""
+    """Returns scrabble score of a word"""
     return reduce(lambda x, y: x + y, map(lambda x: letterScore(x, score_list), S))
-
 
 def scoreList(Rack):
     """Returns a list of all words in Dictionary and their scrabble scores that can be made from letter Rack"""
@@ -47,9 +44,8 @@ def scoreList(Rack):
     sorted_list = list(filter(lambda y: False not in y[0], map(lambda x: [check(x, Rack), x], Dictionary)))
     return list(map(lambda x: [x[-1], wordScore(x[-1], scrabbleScores)], sorted_list))
 
-
 def bestWord(Rack):
-    """Returns the word with the highest score and its score that can be made from letter Rack """
+    """Returns the word with the highest score and its score that can be made from letter Rack"""
     return list(reduce(lambda x, y: x if x[-1] > y[-1] else y, scoreList(Rack) + [['', 0]]))
 
 
