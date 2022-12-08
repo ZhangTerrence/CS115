@@ -21,7 +21,7 @@ def fast_lucas(n):
 memo_change = {}
 def fast_change(amount, coins):
     """Takes an amount and a list of coin denominations as input. Returns the number of coins required to total the
-    given amount. Uses memoization to improve performance."""
+    given amount. Uses memoization to improve performance"""
     if (amount, tuple(coins)) in memo_change:
         return memo_change[(amount, tuple(coins))]
     elif amount == 0:
@@ -39,14 +39,14 @@ def fast_change(amount, coins):
         memo_change[(amount, tuple(coins))] = min(use, lose)
         return memo_change[(amount, tuple(coins))]
 
-
-# If you did this correctly, the results should be nearly instantaneous.
-print(fast_lucas(3))  # 4
-print(fast_lucas(5))  # 11
-print(fast_lucas(9))  # 76
-print(fast_lucas(24))  # 103682
-print(fast_lucas(40))  # 228826127
-print(fast_lucas(50))  # 28143753123
+def test_fast_lucas():
+    """Tests the fast_lucas function"""
+    assert fast_lucas(3) == 4
+    assert fast_lucas(5) == 11
+    assert fast_lucas(9) == 76
+    assert fast_lucas(24) == 103682
+    assert fast_lucas(40) == 228826127
+    assert fast_lucas(50) == 28143753123
 
 print(fast_change(131, [1, 5, 10, 20, 50, 100]))
 print(fast_change(292, [1, 5, 10, 20, 50, 100]))

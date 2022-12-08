@@ -5,8 +5,6 @@
 #########################################
 import sys
 
-# Be sure to submit hw2.py.  Remove the '_template' from the file name.
-
 # Allows up to 10000 recursive calls.
 # The maximum permitted limit varies from system to system.
 sys.setrecursionlimit(10000)
@@ -21,7 +19,6 @@ scrabbleScores = \
 Dictionary = ['a', 'am', 'at', 'apple', 'bat', 'bar', 'babble', 'can', 'foo',
               'spam', 'spammy', 'zzyzva']
 
-# Implement your functions here.
 from functools import reduce
 
 def letterScore(letter, score_list):

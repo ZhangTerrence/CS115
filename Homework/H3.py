@@ -3,8 +3,6 @@
 # Pledge: I pledge my honor that I have abided by the Stevens Honor System.
 # Homework 3
 #########################################
-# Be sure to submit hw3.py.  Remove the '_template' from the file name.
-
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 ' PROBLEM 0
 ' Implement the function giveChange() here:
@@ -29,7 +27,6 @@ def giveChange(amount, coins):
         if use[0] + 1 < lose[0]:
             return [use[0] + 1, [coins[-1]] + use[1]]
         return lose
-
 
 # Here's the list of letter values and a small dictionary to use.
 # Leave the following lists in place.
@@ -68,7 +65,7 @@ def wordsWithScore(dct, scores):
 ' (Notice that you cannot assume anything about the length of the list.)
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 def take(n, L):
-    """Returns the list L[0:n], assuming L is a list and n is at least 0."""
+    """Returns the list L[0:n], assuming L is a list and n is at least 0"""
     if n == 0 or L == []:
         return []
     return [L[0]] + take(n - 1, L[1:])
@@ -79,7 +76,7 @@ def take(n, L):
 ' one. Your code is allowed to refer to list index L[0] and also use slice notation L[1:] but no other slices.
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 def drop(n, L):
-    """Returns the list L[n:], assuming L is a list and n is at least 0."""
+    """Returns the list L[n:], assuming L is a list and n is at least 0"""
     if n == 0:
         return L
     return drop(n - 1, L[1:])
