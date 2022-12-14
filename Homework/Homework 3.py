@@ -8,7 +8,6 @@
 ' Implement the function giveChange() here:
 ' See the PDF in Canvas for more details.
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-# your code goes here
 
 def giveChange(amount, coins):
     """Given a specific amount and list of possible coins, returns the minimum amount of coins needed to make up that
@@ -28,8 +27,6 @@ def giveChange(amount, coins):
             return [use[0] + 1, [coins[-1]] + use[1]]
         return lose
 
-# Here's the list of letter values and a small dictionary to use.
-# Leave the following lists in place.
 scrabbleScores = \
     [['a', 1], ['b', 3], ['c', 3], ['d', 2], ['e', 1], ['f', 4], ['g', 2],
      ['h', 4], ['i', 1], ['j', 8], ['k', 5], ['l', 1], ['m', 3], ['n', 1],

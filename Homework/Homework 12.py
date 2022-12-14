@@ -7,14 +7,12 @@ DAYS_IN_MONTH = (0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
 
 class Date(object):
     """A user-defined data structure that stores and manipulates dates"""
-    # The constructor is always named __init__.
     def __init__(self, month, day, year):
         """The constructor for objects of type Date"""
         self.month = month
         self.day = day
         self.year = year
 
-    # The 'printing' function is always named __str__.
     def __str__(self):
         """This method returns a string representation for the object of type Date that calls it (named self).
             ** Note that this _can_ be called explicitly, but it more often is used implicitly via the print
@@ -120,18 +118,18 @@ class Date(object):
     def diff(self, d2):
         """Returns an integer showing the amount of days between self date and parameter date"""
         count = 0
-        varself = self.copy()
-        vard2 = d2.copy()
+        var_self = self.copy()
+        var_d2 = d2.copy()
         if self.equals(d2):
             return count
-        elif varself.isBefore(vard2):
-            while not vard2.equals(varself):
-                vard2.yesterday()
+        elif var_self.isBefore(var_d2):
+            while not var_d2.equals(var_self):
+                var_d2.yesterday()
                 count -= 1
             return count
-        elif varself.isAfter(vard2):
-            while not varself.equals(vard2):
-                varself.yesterday()
+        elif var_self.isAfter(var_d2):
+            while not var_self.equals(var_d2):
+                var_self.yesterday()
                 count += 1
             return count
 

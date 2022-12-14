@@ -72,6 +72,7 @@ def test_compress():
     assert compress('0' * (MAX_RUN_LENGTH + 1) + '1' * (MAX_RUN_LENGTH + 1) + '0' * (64 - 2 * MAX_RUN_LENGTH - 2)) == \
            '111110000000001111110000000001'
     assert compress('1' * MAX_RUN_LENGTH + '0' * MAX_RUN_LENGTH + '1' * (64 - 2 * MAX_RUN_LENGTH)) == '00000111111111100010'
+    print("Test successful")
 
 def test_uncompress():
     """Tests the uncompress function"""
@@ -85,6 +86,7 @@ def test_uncompress():
            '0' * (MAX_RUN_LENGTH + 1) + '1' * (MAX_RUN_LENGTH + 1) + '0' * (64 - 2 * MAX_RUN_LENGTH - 2)
     assert uncompress(compress('1' * MAX_RUN_LENGTH + '0' * MAX_RUN_LENGTH + '1' * (64 - 2 * MAX_RUN_LENGTH))) == \
            '1' * MAX_RUN_LENGTH + '0' * MAX_RUN_LENGTH + '1' * (64 - 2 * MAX_RUN_LENGTH)
+    print("Test successful")
 
 def test_compression():
     """Tests the compression function"""
@@ -95,3 +97,4 @@ def test_compression():
     assert compression('0' * MAX_RUN_LENGTH + '1' * MAX_RUN_LENGTH + '0' * (64 - 2 * MAX_RUN_LENGTH)) == 0.234375
     assert compression('0' * (MAX_RUN_LENGTH + 1) + '1' * (MAX_RUN_LENGTH + 1) + '0' * (64 - 2 * MAX_RUN_LENGTH - 2)) == 0.46875
     assert compression('1' * MAX_RUN_LENGTH + '0' * MAX_RUN_LENGTH + '1' * (64 - 2 * MAX_RUN_LENGTH)) == 0.3125
+    print("Test successful")

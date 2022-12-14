@@ -47,6 +47,7 @@ def test_fast_lucas():
     assert fast_lucas(24) == 103682
     assert fast_lucas(40) == 228826127
     assert fast_lucas(50) == 28143753123
+    print("Test successful")
 
 print(fast_change(131, [1, 5, 10, 20, 50, 100]))
 print(fast_change(292, [1, 5, 10, 20, 50, 100]))

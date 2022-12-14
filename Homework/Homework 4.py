@@ -33,6 +33,7 @@ def test_pascal_row():
     assert pascal_row(1) == [1, 1]
     assert pascal_row(3) == [1, 3, 3, 1]
     assert pascal_row(5) == [1, 5, 10, 10, 5, 1]
+    print("Test successful")
 
 def test_pascal_triangle():
     """Tests the pascal_triangle function"""
@@ -40,3 +41,4 @@ def test_pascal_triangle():
     assert pascal_triangle(1) == [[1], [1, 1]]
     assert pascal_triangle(3) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
     assert pascal_triangle(5) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1]]
+    print("Test successful")

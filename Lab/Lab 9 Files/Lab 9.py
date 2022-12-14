@@ -1,9 +1,9 @@
 ########################################
 # Name: Terrence Zhang
 # Pledge: I pledge my honor that I have abided by the Stevens Honor System.
-# Lab 8
+# Lab 9
 ########################################
-from cs5png import *  # You may already have this line...
+from cs5png import *
 
 def mult(c, n):
     """Return product of c and n using loop"""
@@ -35,8 +35,7 @@ def weWantThisPixel(col, row):
     """
     if col % 10 == 0 or row % 10 == 0:
         return True
-    else:
-        return False
+    return False
 
 def test():
     """Example function showing how to create an image"""
