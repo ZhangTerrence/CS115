@@ -34,21 +34,12 @@ def testXOR():
     assert XOR(1, 1) == 0
     print("testXOR success")
 
-# Define this function as a single return using the logic gate functions.
 def gor3(x, y, z):
     """OR of three inputs"""
     return gor(gor(x, y), z)
 
 # Full adder
-# Implement this as a single return, using only the logical gate functions. You may also use gor3 or similar helper
-# function that you write using just gates. And you may use assigned-once variables: think of those as named wires.
-
-# XY + YCIN + XCIN
-# XY + XCIN + YCIN
-# X(Y+CIN) + YCIN
-
 # CIN(X ⊕ Y) + XY
-
 def FA(x, y, cin):
     """Assume x, y, and cin are bits. Return the pair of bits (carry_out,sum) such that sum is the low bit of x+y+cin
     and carry_out is the high bit of x+y+carry_in"""
@@ -73,8 +64,6 @@ def twoBitAdd(xx, yy):
     (c, zo) = FA(xx[1], yy[1], 0)
     (d, zt) = FA(xx[0], yy[0], c)
     return d, (zt, zo)
-
-# Notice the assignments to two variables at once, which only works if the right-hand side evaluates to a pair.
 
 def test_twoBitAdd():
     zero = (0, 0)
